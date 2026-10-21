@@ -4,8 +4,8 @@ version = "0.1.0"
 edition = "2021"
 authors = ["OpenArchive Contributors"]
 license = "MIT"
-description = "Offline, read-only structural binary decoupler and geometric extractor for legacy archival formats."
-repository = "https://example.org/openarchive-decoupler"
+description = "Bounded recursive zlib/gzip/deflate stream carver that unpacks nested compressed binary data, then runs coordinate and tabular structure heuristics on both the original and decompressed streams while preserving full decompression lineage."
+repository = "https://github.com/spun0utsugar/decoupler"
 
 [[bin]]
 name = "decouple"
