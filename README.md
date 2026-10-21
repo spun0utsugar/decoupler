@@ -1,5 +1,10 @@
 # OpenArchive Decoupler (`decouple`)
 
+[![CI](https://github.com/spun0utsugar/decoupler/actions/workflows/ci.yml/badge.svg)](https://github.com/spun0utsugar/decoupler/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](decouple.py)
+[![Rust](https://img.shields.io/badge/rust-2021%20edition-orange.svg)](Cargo.toml)
+
 **OpenArchive Decoupler** is a zero-dependency, offline, read-only structural binary analyzer and universal format decoupler. It ingests legacy CAD archives, GIS vector files, proprietary coordinate containers, and structured telemetry dumps—without requiring the original proprietary software or runtime—and losslessly unpacks them into universal, human-auditable formats (`SVG`, `GeoJSON`, `SQLite`, `TIFF`/`PNG`, and `TXT`/`JSON` audit reports).
 
 > **Legitimate Archival & Migration Use Only**
