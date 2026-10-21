@@ -32,6 +32,11 @@ jobs:
       - name: Run Python test suite
         run: python tests/test_decouple.py
 
+      - name: Test pip install & CLI entrypoint
+        run: |
+          python -m pip install .
+          decouple --help
+
   rust-ci:
     name: Rust (${{ matrix.os }})
     runs-on: ${{ matrix.os }}

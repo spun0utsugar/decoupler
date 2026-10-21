@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "openarchive-decoupler"
+version = "0.1.0"
+description = "Bounded recursive zlib/gzip/deflate stream carver that unpacks nested compressed binary data, then runs coordinate and tabular structure heuristics on both the original and decompressed streams while preserving full decompression lineage."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+    { name = "OpenArchive Contributors" }
+]
+requires-python = ">=3.10"
+keywords = [
+    "binary-analysis",
+    "reverse-engineering",
+    "data-recovery",
+    "digital-preservation",
+    "carver",
+    "zlib",
+    "deflate",
+    "gis",
+    "cad"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: System :: Archiving",
+    "Topic :: System :: Recovery Tools",
+]
+dependencies = []
+
+[project.scripts]
+decouple = "decouple:main"
+openarchive-decoupler = "decouple:main"
+
+[project.urls]
+Homepage = "https://github.com/spun0utsugar/decoupler"
+Repository = "https://github.com/spun0utsugar/decoupler"
+Issues = "https://github.com/spun0utsugar/decoupler/issues"
+
+[tool.setuptools]
+py-modules = ["decouple"]

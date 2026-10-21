@@ -75,8 +75,23 @@ Both a **single-binary Rust implementation** (`Cargo.toml` + `src/`) and a **zer
 
 ## Build & Run Instructions
 
-### Option A: Zero-Dependency Python CLI (Immediate Execution)
-Requires only Python 3.8+ standard library (zero `pip` packages):
+### Option A: Install via `pip` or `pipx`
+
+Install directly from GitHub into your environment or run instantly with `pipx`:
+
+```bash
+# Install directly from GitHub
+pip install git+https://github.com/spun0utsugar/decoupler.git
+
+# Or run instantly in an isolated environment with pipx
+pipx run git+https://github.com/spun0utsugar/decoupler.git --help
+
+# Once installed, run anywhere via the CLI entrypoint:
+decouple <archive_file> --out <output_dir> --verbose
+```
+
+### Option B: Zero-Dependency Python CLI (Direct Execution)
+Requires only Python 3.10+ standard library (zero `pip` packages):
 
 ```bash
 # Unpack a single binary file into SVG, GeoJSON, SQLite, TIFF, and TXT/JSON audit reports
@@ -92,7 +107,7 @@ python decouple.py tests/samples/municipal_parcels.shp --dry-run
 python decouple.py tests/samples/legacy_cad_gis_archive.oadc --gui
 ```
 
-### Option B: Native Static Rust Binary (`cargo`)
+### Option C: Native Static Rust Binary (`cargo`)
 When a Rust toolchain (`cargo` / `rustc`) is installed:
 
 ```bash
