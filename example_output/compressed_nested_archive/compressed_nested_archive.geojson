@@ -1,0 +1,184 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "source_filename": "compressed_nested_archive.bin",
+    "sha256": "f9c23d55ed6e581a28a9f4c7fb87bcc5dd9d3f5aab1aa70cfa6cbac809b206a8",
+    "format_family": "GENERIC_STRUCTURED_BINARY",
+    "crs": {
+      "crs_type": "LOCAL_CARTESIAN",
+      "epsg_hint": null,
+      "affine_matrix": null,
+      "units": "units",
+      "provenance": null
+    },
+    "decompressed_streams": [
+      {
+        "stream_id": "parent_offset:0x54/decompressed_0_zlib",
+        "parent_lineage": "root",
+        "depth": 1,
+        "codec": "ZLIB_RFC1950",
+        "host_offset": 84,
+        "compressed_length": 134,
+        "decompressed_length": 195,
+        "expansion_ratio": 1.46,
+        "sha256": "85039081e03b859db33d9a972577108a811096dbc66362a4d55c8048e32fa222"
+      },
+      {
+        "stream_id": "parent_offset:0x54/decompressed_0_zlib/parent_offset:0x6c/decompressed_0_gzip",
+        "parent_lineage": "parent_offset:0x54/decompressed_0_zlib",
+        "depth": 2,
+        "codec": "GZIP_RFC1952",
+        "host_offset": 108,
+        "compressed_length": 87,
+        "decompressed_length": 128,
+        "expansion_ratio": 1.47,
+        "sha256": "d1d354b2728379e9665a6f55497254063929cec2585fdb2a5e04a954f57085d1"
+      },
+      {
+        "stream_id": "parent_offset:0xe0/decompressed_1_raw",
+        "parent_lineage": "root",
+        "depth": 1,
+        "codec": "RAW_DEFLATE",
+        "host_offset": 224,
+        "compressed_length": 1113,
+        "decompressed_length": 1108,
+        "expansion_ratio": 1.0,
+        "sha256": "325df2428a0bc09052d0f38cbd845d3790fcb1223f30beed121c7520e0d4612a"
+      }
+    ]
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "feat_f64_0_0x10",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.0,
+            20.0
+          ],
+          [
+            40.0,
+            60.0
+          ],
+          [
+            85.0,
+            90.0
+          ],
+          [
+            130.0,
+            110.0
+          ]
+        ]
+      },
+      "properties": {
+        "feature_id": "feat_f64_0_0x10",
+        "layer_id": "layer_heuristic_f64",
+        "layer_name": "heuristic_coordinate_runs",
+        "geometry_kind": "LineString",
+        "byte_offset": 16,
+        "byte_length": 68,
+        "stream_lineage": "root",
+        "detector": "SlidingWindowFloat64Detector",
+        "confidence": 0.876,
+        "vertex_count": 4,
+        "encoding": "LENGTH_PREFIXED_F64_LE"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "feat_f64_1_0x8",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              200.0,
+              200.0
+            ],
+            [
+              300.0,
+              200.0
+            ],
+            [
+              330.0,
+              290.0
+            ],
+            [
+              250.0,
+              350.0
+            ],
+            [
+              170.0,
+              290.0
+            ],
+            [
+              200.0,
+              200.0
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "feature_id": "feat_f64_1_0x8",
+        "layer_id": "layer_decompressed_1",
+        "layer_name": "decompressed_vectors (parent_offset:0x54/decompressed_0_zlib)",
+        "geometry_kind": "Polygon",
+        "byte_offset": 8,
+        "byte_length": 100,
+        "stream_lineage": "parent_offset:0x54/decompressed_0_zlib",
+        "detector": "SlidingWindowFloat64Detector",
+        "confidence": 0.8935,
+        "host_compressed_offset": 84,
+        "host_compressed_length": 134,
+        "vertex_count": 6,
+        "encoding": "LENGTH_PREFIXED_F64_LE"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "feat_f64_2_0x0",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            410.123456,
+            510.654321
+          ],
+          [
+            445.987654,
+            535.112233
+          ],
+          [
+            490.556677,
+            580.998877
+          ],
+          [
+            535.334455,
+            615.776655
+          ],
+          [
+            590.2211,
+            660.443322
+          ]
+        ]
+      },
+      "properties": {
+        "feature_id": "feat_f64_2_0x0",
+        "layer_id": "layer_decompressed_2",
+        "layer_name": "decompressed_vectors (parent_offset:0xe0/decompressed_1_raw)",
+        "geometry_kind": "LineString",
+        "byte_offset": 0,
+        "byte_length": 84,
+        "stream_lineage": "parent_offset:0xe0/decompressed_1_raw",
+        "detector": "SlidingWindowFloat64Detector",
+        "confidence": 0.921,
+        "host_compressed_offset": 220,
+        "host_compressed_length": 1117,
+        "vertex_count": 5,
+        "encoding": "LENGTH_PREFIXED_F64_LE"
+      }
+    }
+  ]
+}

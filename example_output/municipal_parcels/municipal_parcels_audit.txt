@@ -1,0 +1,43 @@
+================================================================================
+ OPENARCHIVE DECOUPLER — STRUCTURAL BINARY AUDIT REPORT
+================================================================================
+Source File      : municipal_parcels.shp
+File Size        : 236 bytes
+SHA-256 Digest   : a46eb628292548b3b6391a037e9b5acf04276ed105c2b6b24e1cb47268059c39
+Detected Magic   : 0x0000270A (Esri Shapefile Main Header)
+Format Family    : ESRI_SHAPEFILE
+Overall Entropy  : 4.1263 bits/byte
+Endianness Hint  : LITTLE_ENDIAN
+CRS Hint         : WGS84_LON_LAT (degrees)
+EPSG Code Hint   : EPSG:4326
+Global BBox      : min=(-73.9851, 40.7484), max=(-73.9751, 40.7584)
+Carved Streams   : 0 decompressed virtual sub-stream(s)
+
+--------------------------------------------------------------------------------
+ 1. RECOVERED VECTOR LAYERS & GEOMETRIC STRUCTURES (1 layers, 1 features)
+--------------------------------------------------------------------------------
+
+[Layer layer_shp_0] name="shapefile_vectors" features=1 stroke=#0284c7
+  - Feature shp_feat_1         | Kind: Polygon        | Vertices: 5     | Bytes: 0x000064..0x0000ec (136 B) | Confidence: 0.9340
+    Detector: ShapefileRecordDetector | Lineage: root | Breakdown: [consistency=0.98, ptr=1.00, entropy=0.95, geom=0.85]
+    * No extreme erratic jumps across bounding box
+    * Forms closed polygon ring
+    * Bounds match geographic Lon/Lat domain
+    * Region Shannon entropy = 4.661 bits/byte
+
+--------------------------------------------------------------------------------
+ 2. RECOVERED ATTRIBUTE TABLES (0 tables)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+ 3. RECOVERED RASTER TILES (0 tiles)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+ 4. EMBEDDED ASSETS, POINTER TABLES & OPAQUE REGIONS (0 blocks)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+ 5. ENTROPY PROFILE (1 windows)
+--------------------------------------------------------------------------------
+  Bytes 0x000000..0x0000ec ( 236 B) | Entropy: 4.1263 bits/byte | MEDIUM_MIXED

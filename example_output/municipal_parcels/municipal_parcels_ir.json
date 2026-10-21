@@ -1,0 +1,126 @@
+{
+  "metadata": {
+    "source_filename": "municipal_parcels.shp",
+    "file_size": 236,
+    "sha256": "a46eb628292548b3b6391a037e9b5acf04276ed105c2b6b24e1cb47268059c39",
+    "detected_magic": "0x0000270A (Esri Shapefile Main Header)",
+    "format_family": "ESRI_SHAPEFILE",
+    "overall_entropy": 4.1263,
+    "endianness_hint": "LITTLE_ENDIAN",
+    "tool_version": "0.2.1"
+  },
+  "coordinate_system": {
+    "crs_type": "WGS84_LON_LAT",
+    "epsg_hint": 4326,
+    "affine_matrix": null,
+    "units": "degrees",
+    "provenance": null
+  },
+  "global_bbox": {
+    "min_x": -73.9851,
+    "min_y": 40.7484,
+    "max_x": -73.9751,
+    "max_y": 40.7584,
+    "min_z": null,
+    "max_z": null
+  },
+  "entropy_profile": [
+    {
+      "offset": 0,
+      "length": 236,
+      "shannon_entropy": 4.1263,
+      "classification": "MEDIUM_MIXED"
+    }
+  ],
+  "decompressed_streams": [],
+  "layers": [
+    {
+      "id": "layer_shp_0",
+      "name": "shapefile_vectors",
+      "style_stroke": "#0284c7",
+      "style_fill": "rgba(2, 132, 199, 0.15)",
+      "features": [
+        {
+          "id": "shp_feat_1",
+          "layer_id": "layer_shp_0",
+          "geometry": {
+            "type": "Polygon",
+            "data": {
+              "rings": [
+                [
+                  [
+                    -73.9851,
+                    40.7484
+                  ],
+                  [
+                    -73.9751,
+                    40.7484
+                  ],
+                  [
+                    -73.9751,
+                    40.7584
+                  ],
+                  [
+                    -73.9851,
+                    40.7584
+                  ],
+                  [
+                    -73.9851,
+                    40.7484
+                  ]
+                ]
+              ]
+            }
+          },
+          "bbox": {
+            "min_x": -73.9851,
+            "min_y": 40.7484,
+            "max_x": -73.9751,
+            "max_y": 40.7584,
+            "min_z": null,
+            "max_z": null
+          },
+          "properties": {
+            "record_number": 1,
+            "stream_lineage": "root"
+          },
+          "provenance": {
+            "id": "prov_shp_1",
+            "span": {
+              "offset": 100,
+              "length": 136
+            },
+            "detector": "ShapefileRecordDetector",
+            "endianness": "MIXED_BE_LE",
+            "confidence": {
+              "composite": 0.934,
+              "internal_consistency": 0.98,
+              "pointer_validity": 1.0,
+              "entropy_score": 0.95,
+              "geometric_plausibility": 0.85,
+              "notes": [
+                "No extreme erratic jumps across bounding box",
+                "Forms closed polygon ring",
+                "Bounds match geographic Lon/Lat domain",
+                "Region Shannon entropy = 4.661 bits/byte"
+              ]
+            },
+            "stream_lineage": "root",
+            "host_compressed_span": null
+          }
+        }
+      ],
+      "bbox": {
+        "min_x": -73.9851,
+        "min_y": 40.7484,
+        "max_x": -73.9751,
+        "max_y": 40.7584,
+        "min_z": null,
+        "max_z": null
+      }
+    }
+  ],
+  "attribute_tables": [],
+  "raster_tiles": [],
+  "embedded_assets": []
+}

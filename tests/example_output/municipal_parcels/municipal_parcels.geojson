@@ -1,0 +1,61 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "source_filename": "municipal_parcels.shp",
+    "sha256": "a46eb628292548b3b6391a037e9b5acf04276ed105c2b6b24e1cb47268059c39",
+    "format_family": "ESRI_SHAPEFILE",
+    "crs": {
+      "crs_type": "WGS84_LON_LAT",
+      "epsg_hint": 4326,
+      "affine_matrix": null,
+      "units": "degrees",
+      "provenance": null
+    },
+    "decompressed_streams": []
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "shp_feat_1",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.9851,
+              40.7484
+            ],
+            [
+              -73.9751,
+              40.7484
+            ],
+            [
+              -73.9751,
+              40.7584
+            ],
+            [
+              -73.9851,
+              40.7584
+            ],
+            [
+              -73.9851,
+              40.7484
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "feature_id": "shp_feat_1",
+        "layer_id": "layer_shp_0",
+        "layer_name": "shapefile_vectors",
+        "geometry_kind": "Polygon",
+        "byte_offset": 100,
+        "byte_length": 136,
+        "stream_lineage": "root",
+        "detector": "ShapefileRecordDetector",
+        "confidence": 0.934,
+        "record_number": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+================================================================================
+ OPENARCHIVE DECOUPLER — STRUCTURAL BINARY AUDIT REPORT
+================================================================================
+Source File      : raw_telemetry_dump.bin
+File Size        : 232 bytes
+SHA-256 Digest   : 36657a0fe84db3edc5abf82bb6d82d543f3ba723573b224a9d62f87180617c13
+Detected Magic   : UNKNOWN (0x5241575601000000)
+Format Family    : GENERIC_STRUCTURED_BINARY
+Overall Entropy  : 2.8434 bits/byte
+Endianness Hint  : LITTLE_ENDIAN
+CRS Hint         : LOCAL_CARTESIAN (units)
+Global BBox      : min=(1000.0, 2000.0), max=(1300.0, 2200.0)
+Carved Streams   : 0 decompressed virtual sub-stream(s)
+
+--------------------------------------------------------------------------------
+ 1. RECOVERED VECTOR LAYERS & GEOMETRIC STRUCTURES (1 layers, 1 features)
+--------------------------------------------------------------------------------
+
+[Layer layer_heuristic_f64] name="heuristic_coordinate_runs" features=1 stroke=#0284c7
+  - Feature feat_f64_0_0x24    | Kind: LineString     | Vertices: 6     | Bytes: 0x000024..0x000088 (100 B) | Confidence: 0.9210
+    Detector: SlidingWindowFloat64Detector | Lineage: root | Breakdown: [consistency=0.92, ptr=0.85, entropy=0.95, geom=0.95]
+    * Smooth spatial continuity (mean_step/diag = 0.203)
+    * No extreme erratic jumps across bounding box
+    * Bounds match plausible Cartesian/Projected domain
+    * Region Shannon entropy = 2.352 bits/byte
+
+--------------------------------------------------------------------------------
+ 2. RECOVERED ATTRIBUTE TABLES (1 tables)
+--------------------------------------------------------------------------------
+
+[Table table_heuristic_0_0x88] name="heuristic_records_0x88" stride=24B rows=4 | Lineage: root | Bytes: 0x000088..0x0000e8 (96 B) | Confidence: 0.8800
+  Row 0  : {"record_id": 1, "field_f32": 15.5, "ascii_payload": "NODE_01"}
+  Row 1  : {"record_id": 2, "field_f32": 31.0, "ascii_payload": "NODE_02"}
+  Row 2  : {"record_id": 3, "field_f32": 46.5, "ascii_payload": "NODE_03"}
+  Row 3  : {"record_id": 4, "field_f32": 62.0, "ascii_payload": "NODE_04"}
+
+--------------------------------------------------------------------------------
+ 3. RECOVERED RASTER TILES (0 tiles)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+ 4. EMBEDDED ASSETS, POINTER TABLES & OPAQUE REGIONS (1 blocks)
+--------------------------------------------------------------------------------
+  - Asset asset_ptrtab_0_0x10 | Kind: OFFSET_TABLE                   | Opaque: False | Entropy: 1.392 | Lineage: root | Bytes: 0x000010..0x000024 (20 B) | Confidence: 0.8710
+    Description: Monotonic u32 offset table (4 valid stream pointers)
+
+--------------------------------------------------------------------------------
+ 5. ENTROPY PROFILE (1 windows)
+--------------------------------------------------------------------------------
+  Bytes 0x000000..0x0000e8 ( 232 B) | Entropy: 2.8434 bits/byte | MEDIUM_MIXED

@@ -1,0 +1,445 @@
+{
+  "metadata": {
+    "source_filename": "compressed_nested_archive.bin",
+    "file_size": 1515,
+    "sha256": "f9c23d55ed6e581a28a9f4c7fb87bcc5dd9d3f5aab1aa70cfa6cbac809b206a8",
+    "detected_magic": "UNKNOWN (0x434d505801000000)",
+    "format_family": "GENERIC_STRUCTURED_BINARY",
+    "overall_entropy": 7.428,
+    "endianness_hint": "LITTLE_ENDIAN",
+    "tool_version": "0.2.1"
+  },
+  "coordinate_system": {
+    "crs_type": "LOCAL_CARTESIAN",
+    "epsg_hint": null,
+    "affine_matrix": null,
+    "units": "units",
+    "provenance": null
+  },
+  "global_bbox": {
+    "min_x": 10.0,
+    "min_y": 20.0,
+    "max_x": 590.2211,
+    "max_y": 660.443322,
+    "min_z": null,
+    "max_z": null
+  },
+  "entropy_profile": [
+    {
+      "offset": 0,
+      "length": 256,
+      "shannon_entropy": 5.8077,
+      "classification": "MEDIUM_MIXED"
+    },
+    {
+      "offset": 256,
+      "length": 256,
+      "shannon_entropy": 7.0435,
+      "classification": "MEDIUM_MIXED"
+    },
+    {
+      "offset": 512,
+      "length": 256,
+      "shannon_entropy": 7.0842,
+      "classification": "MEDIUM_MIXED"
+    },
+    {
+      "offset": 768,
+      "length": 256,
+      "shannon_entropy": 7.1638,
+      "classification": "MEDIUM_MIXED"
+    },
+    {
+      "offset": 1024,
+      "length": 256,
+      "shannon_entropy": 7.1229,
+      "classification": "MEDIUM_MIXED"
+    },
+    {
+      "offset": 1280,
+      "length": 235,
+      "shannon_entropy": 4.5138,
+      "classification": "MEDIUM_MIXED"
+    }
+  ],
+  "decompressed_streams": [
+    {
+      "stream_id": "parent_offset:0x54/decompressed_0_zlib",
+      "parent_lineage": "root",
+      "depth": 1,
+      "codec": "ZLIB_RFC1950",
+      "host_offset": 84,
+      "compressed_length": 134,
+      "decompressed_length": 195,
+      "expansion_ratio": 1.46,
+      "sha256": "85039081e03b859db33d9a972577108a811096dbc66362a4d55c8048e32fa222"
+    },
+    {
+      "stream_id": "parent_offset:0x54/decompressed_0_zlib/parent_offset:0x6c/decompressed_0_gzip",
+      "parent_lineage": "parent_offset:0x54/decompressed_0_zlib",
+      "depth": 2,
+      "codec": "GZIP_RFC1952",
+      "host_offset": 108,
+      "compressed_length": 87,
+      "decompressed_length": 128,
+      "expansion_ratio": 1.47,
+      "sha256": "d1d354b2728379e9665a6f55497254063929cec2585fdb2a5e04a954f57085d1"
+    },
+    {
+      "stream_id": "parent_offset:0xe0/decompressed_1_raw",
+      "parent_lineage": "root",
+      "depth": 1,
+      "codec": "RAW_DEFLATE",
+      "host_offset": 224,
+      "compressed_length": 1113,
+      "decompressed_length": 1108,
+      "expansion_ratio": 1.0,
+      "sha256": "325df2428a0bc09052d0f38cbd845d3790fcb1223f30beed121c7520e0d4612a"
+    }
+  ],
+  "layers": [
+    {
+      "id": "layer_heuristic_f64",
+      "name": "heuristic_coordinate_runs",
+      "style_stroke": "#0284c7",
+      "style_fill": "rgba(2, 132, 199, 0.15)",
+      "features": [
+        {
+          "id": "feat_f64_0_0x10",
+          "layer_id": "layer_heuristic_f64",
+          "geometry": {
+            "type": "LineString",
+            "data": {
+              "coords": [
+                [
+                  10.0,
+                  20.0
+                ],
+                [
+                  40.0,
+                  60.0
+                ],
+                [
+                  85.0,
+                  90.0
+                ],
+                [
+                  130.0,
+                  110.0
+                ]
+              ]
+            }
+          },
+          "bbox": {
+            "min_x": 10.0,
+            "min_y": 20.0,
+            "max_x": 130.0,
+            "max_y": 110.0,
+            "min_z": null,
+            "max_z": null
+          },
+          "properties": {
+            "vertex_count": 4,
+            "encoding": "LENGTH_PREFIXED_F64_LE",
+            "stream_lineage": "root"
+          },
+          "provenance": {
+            "id": "prov_f64_0_0x10",
+            "span": {
+              "offset": 16,
+              "length": 68
+            },
+            "detector": "SlidingWindowFloat64Detector",
+            "endianness": "LITTLE_ENDIAN",
+            "confidence": {
+              "composite": 0.876,
+              "internal_consistency": 0.92,
+              "pointer_validity": 0.85,
+              "entropy_score": 0.65,
+              "geometric_plausibility": 0.95,
+              "notes": [
+                "Smooth spatial continuity (mean_step/diag = 0.341)",
+                "No extreme erratic jumps across bounding box",
+                "Bounds match plausible Cartesian/Projected domain",
+                "Region Shannon entropy = 1.730 bits/byte"
+              ]
+            },
+            "stream_lineage": "root",
+            "host_compressed_span": null
+          }
+        }
+      ],
+      "bbox": {
+        "min_x": 10.0,
+        "min_y": 20.0,
+        "max_x": 130.0,
+        "max_y": 110.0,
+        "min_z": null,
+        "max_z": null
+      }
+    },
+    {
+      "id": "layer_decompressed_1",
+      "name": "decompressed_vectors (parent_offset:0x54/decompressed_0_zlib)",
+      "style_stroke": "#16a34a",
+      "style_fill": "rgba(22, 163, 74, 0.15)",
+      "features": [
+        {
+          "id": "feat_f64_1_0x8",
+          "layer_id": "layer_decompressed_1",
+          "geometry": {
+            "type": "Polygon",
+            "data": {
+              "rings": [
+                [
+                  [
+                    200.0,
+                    200.0
+                  ],
+                  [
+                    300.0,
+                    200.0
+                  ],
+                  [
+                    330.0,
+                    290.0
+                  ],
+                  [
+                    250.0,
+                    350.0
+                  ],
+                  [
+                    170.0,
+                    290.0
+                  ],
+                  [
+                    200.0,
+                    200.0
+                  ]
+                ]
+              ]
+            }
+          },
+          "bbox": {
+            "min_x": 170.0,
+            "min_y": 200.0,
+            "max_x": 330.0,
+            "max_y": 350.0,
+            "min_z": null,
+            "max_z": null
+          },
+          "properties": {
+            "vertex_count": 6,
+            "encoding": "LENGTH_PREFIXED_F64_LE",
+            "stream_lineage": "parent_offset:0x54/decompressed_0_zlib"
+          },
+          "provenance": {
+            "id": "prov_f64_1_0x8",
+            "span": {
+              "offset": 8,
+              "length": 100
+            },
+            "detector": "SlidingWindowFloat64Detector",
+            "endianness": "LITTLE_ENDIAN",
+            "confidence": {
+              "composite": 0.8935,
+              "internal_consistency": 0.92,
+              "pointer_validity": 0.85,
+              "entropy_score": 0.65,
+              "geometric_plausibility": 1.0,
+              "notes": [
+                "Smooth spatial continuity (mean_step/diag = 0.447)",
+                "No extreme erratic jumps across bounding box",
+                "Forms closed polygon ring",
+                "Bounds match plausible Cartesian/Projected domain",
+                "Region Shannon entropy = 1.788 bits/byte"
+              ]
+            },
+            "stream_lineage": "parent_offset:0x54/decompressed_0_zlib",
+            "host_compressed_span": {
+              "offset": 84,
+              "length": 134
+            }
+          }
+        }
+      ],
+      "bbox": {
+        "min_x": 170.0,
+        "min_y": 200.0,
+        "max_x": 330.0,
+        "max_y": 350.0,
+        "min_z": null,
+        "max_z": null
+      }
+    },
+    {
+      "id": "layer_decompressed_2",
+      "name": "decompressed_vectors (parent_offset:0xe0/decompressed_1_raw)",
+      "style_stroke": "#ea580c",
+      "style_fill": "rgba(234, 88, 12, 0.15)",
+      "features": [
+        {
+          "id": "feat_f64_2_0x0",
+          "layer_id": "layer_decompressed_2",
+          "geometry": {
+            "type": "LineString",
+            "data": {
+              "coords": [
+                [
+                  410.123456,
+                  510.654321
+                ],
+                [
+                  445.987654,
+                  535.112233
+                ],
+                [
+                  490.556677,
+                  580.998877
+                ],
+                [
+                  535.334455,
+                  615.776655
+                ],
+                [
+                  590.2211,
+                  660.443322
+                ]
+              ]
+            }
+          },
+          "bbox": {
+            "min_x": 410.123456,
+            "min_y": 510.654321,
+            "max_x": 590.2211,
+            "max_y": 660.443322,
+            "min_z": null,
+            "max_z": null
+          },
+          "properties": {
+            "vertex_count": 5,
+            "encoding": "LENGTH_PREFIXED_F64_LE",
+            "stream_lineage": "parent_offset:0xe0/decompressed_1_raw"
+          },
+          "provenance": {
+            "id": "prov_f64_2_0x0",
+            "span": {
+              "offset": 0,
+              "length": 84
+            },
+            "detector": "SlidingWindowFloat64Detector",
+            "endianness": "LITTLE_ENDIAN",
+            "confidence": {
+              "composite": 0.921,
+              "internal_consistency": 0.92,
+              "pointer_validity": 0.85,
+              "entropy_score": 0.95,
+              "geometric_plausibility": 0.95,
+              "notes": [
+                "Smooth spatial continuity (mean_step/diag = 0.251)",
+                "No extreme erratic jumps across bounding box",
+                "Bounds match plausible Cartesian/Projected domain",
+                "Region Shannon entropy = 5.797 bits/byte"
+              ]
+            },
+            "stream_lineage": "parent_offset:0xe0/decompressed_1_raw",
+            "host_compressed_span": {
+              "offset": 220,
+              "length": 1117
+            }
+          }
+        }
+      ],
+      "bbox": {
+        "min_x": 410.123456,
+        "min_y": 510.654321,
+        "max_x": 590.2211,
+        "max_y": 660.443322,
+        "min_z": null,
+        "max_z": null
+      }
+    }
+  ],
+  "attribute_tables": [
+    {
+      "id": "table_heuristic_0_0x8",
+      "name": "heuristic_records_0x8",
+      "record_stride": 24,
+      "record_count": 5,
+      "columns": [
+        {
+          "name": "record_id",
+          "data_type": "UINT32",
+          "byte_offset_in_record": 0,
+          "byte_width": 4
+        },
+        {
+          "name": "field_f32",
+          "data_type": "FLOAT32",
+          "byte_offset_in_record": 4,
+          "byte_width": 4
+        },
+        {
+          "name": "ascii_payload",
+          "data_type": "ASCII",
+          "byte_offset_in_record": 8,
+          "byte_width": 16
+        }
+      ],
+      "rows": [
+        {
+          "record_id": 10,
+          "field_f32": 421.25,
+          "ascii_payload": "GZIP_REC_10"
+        },
+        {
+          "record_id": 11,
+          "field_f32": 463.375,
+          "ascii_payload": "GZIP_REC_11"
+        },
+        {
+          "record_id": 12,
+          "field_f32": 505.5,
+          "ascii_payload": "GZIP_REC_12"
+        },
+        {
+          "record_id": 13,
+          "field_f32": 547.625,
+          "ascii_payload": "GZIP_REC_13"
+        },
+        {
+          "record_id": 14,
+          "field_f32": 589.75,
+          "ascii_payload": "GZIP_REC_14"
+        }
+      ],
+      "provenance": {
+        "id": "prov_table_0_0x8",
+        "span": {
+          "offset": 8,
+          "length": 120
+        },
+        "detector": "SlidingStrideRecordDetector",
+        "endianness": "LITTLE_ENDIAN",
+        "confidence": {
+          "composite": 0.88,
+          "internal_consistency": 0.9,
+          "pointer_validity": 0.85,
+          "entropy_score": 0.95,
+          "geometric_plausibility": 0.85,
+          "notes": [
+            "Sequential u32 key with fixed stride 24 across 5 records",
+            "Region Shannon entropy = 3.833 bits/byte"
+          ]
+        },
+        "stream_lineage": "parent_offset:0x54/decompressed_0_zlib/parent_offset:0x6c/decompressed_0_gzip",
+        "host_compressed_span": {
+          "offset": 84,
+          "length": 134
+        }
+      }
+    }
+  ],
+  "raster_tiles": [],
+  "embedded_assets": []
+}

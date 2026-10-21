@@ -1,0 +1,451 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "source_filename": "legacy_cad_gis_archive.oadc",
+    "sha256": "956bd03b32402dccf938a6762236415ff60d822d73a2bc26f50a0f897fb0c9df",
+    "format_family": "LEGACY_CAD_GIS_CONTAINER",
+    "crs": {
+      "crs_type": "PROJECTED_OR_GEOGRAPHIC_EPSG",
+      "epsg_hint": 3857,
+      "affine_matrix": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        500000.0,
+        4000000.0
+      ],
+      "units": "meters",
+      "provenance": {
+        "id": "prov_crs_0",
+        "span": {
+          "offset": 144,
+          "length": 52
+        },
+        "detector": "AffineCrsDetector",
+        "endianness": "LITTLE_ENDIAN",
+        "confidence": {
+          "composite": 0.918,
+          "internal_consistency": 0.96,
+          "pointer_validity": 1.0,
+          "entropy_score": 0.65,
+          "geometric_plausibility": 0.95,
+          "notes": [
+            "Recovered 2D affine transform & EPSG=3857",
+            "Region Shannon entropy = 1.673 bits/byte"
+          ]
+        },
+        "stream_lineage": "root",
+        "host_compressed_span": null
+      }
+    },
+    "decompressed_streams": []
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "feat_1_0",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              120.0,
+              140.0
+            ],
+            [
+              260.0,
+              140.0
+            ],
+            [
+              280.0,
+              260.0
+            ],
+            [
+              140.0,
+              280.0
+            ],
+            [
+              120.0,
+              140.0
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "feature_id": "feat_1_0",
+        "layer_id": "layer_0_1",
+        "layer_name": "parcel_polygons",
+        "geometry_kind": "Polygon",
+        "byte_offset": 220,
+        "byte_length": 88,
+        "stream_lineage": "root",
+        "detector": "StructuredVectorSectionDetector",
+        "confidence": 0.883,
+        "record_id": 101,
+        "layer": "parcel_polygons"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "feat_1_1",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              320.0,
+              160.0
+            ],
+            [
+              480.0,
+              160.0
+            ],
+            [
+              480.0,
+              310.0
+            ],
+            [
+              320.0,
+              310.0
+            ],
+            [
+              320.0,
+              160.0
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "feature_id": "feat_1_1",
+        "layer_id": "layer_0_1",
+        "layer_name": "parcel_polygons",
+        "geometry_kind": "Polygon",
+        "byte_offset": 308,
+        "byte_length": 88,
+        "stream_lineage": "root",
+        "detector": "StructuredVectorSectionDetector",
+        "confidence": 0.883,
+        "record_id": 102,
+        "layer": "parcel_polygons"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "feat_2_0",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            80.0,
+            90.0
+          ],
+          [
+            210.0,
+            115.0
+          ],
+          [
+            350.0,
+            120.0
+          ],
+          [
+            520.0,
+            150.0
+          ]
+        ]
+      },
+      "properties": {
+        "feature_id": "feat_2_0",
+        "layer_id": "layer_1_2",
+        "layer_name": "road_centerlines",
+        "geometry_kind": "LineString",
+        "byte_offset": 420,
+        "byte_length": 72,
+        "stream_lineage": "root",
+        "detector": "StructuredVectorSectionDetector",
+        "confidence": 0.918,
+        "record_id": 201,
+        "layer": "road_centerlines"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "feat_2_1",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            295.0,
+            80.0
+          ],
+          [
+            300.0,
+            200.0
+          ],
+          [
+            305.0,
+            340.0
+          ],
+          [
+            310.0,
+            420.0
+          ]
+        ]
+      },
+      "properties": {
+        "feature_id": "feat_2_1",
+        "layer_id": "layer_1_2",
+        "layer_name": "road_centerlines",
+        "geometry_kind": "LineString",
+        "byte_offset": 492,
+        "byte_length": 72,
+        "stream_lineage": "root",
+        "detector": "StructuredVectorSectionDetector",
+        "confidence": 0.918,
+        "record_id": 202,
+        "layer": "road_centerlines"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "feat_3_0",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            100.0,
+            360.0
+          ],
+          [
+            220.0,
+            440.0
+          ],
+          [
+            380.0,
+            280.0
+          ],
+          [
+            500.0,
+            390.0
+          ]
+        ],
+        "curve_encoding": "CubicBezierControlPolygon"
+      },
+      "properties": {
+        "feature_id": "feat_3_0",
+        "layer_id": "layer_2_3",
+        "layer_name": "contour_splines",
+        "geometry_kind": "CubicBezier",
+        "byte_offset": 588,
+        "byte_length": 72,
+        "stream_lineage": "root",
+        "detector": "StructuredVectorSectionDetector",
+        "confidence": 0.963,
+        "record_id": 301,
+        "layer": "contour_splines"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "feat_grid_5",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            100.0,
+            100.0,
+            250.0
+          ],
+          [
+            180.0,
+            100.0,
+            258.25
+          ],
+          [
+            260.0,
+            100.0,
+            266.5
+          ],
+          [
+            340.0,
+            100.0,
+            274.75
+          ],
+          [
+            420.0,
+            100.0,
+            283.0
+          ],
+          [
+            500.0,
+            100.0,
+            291.25
+          ],
+          [
+            100.0,
+            160.0,
+            262.5
+          ],
+          [
+            180.0,
+            160.0,
+            270.75
+          ],
+          [
+            260.0,
+            160.0,
+            279.0
+          ],
+          [
+            340.0,
+            160.0,
+            287.25
+          ],
+          [
+            420.0,
+            160.0,
+            295.5
+          ],
+          [
+            500.0,
+            160.0,
+            303.75
+          ],
+          [
+            100.0,
+            220.0,
+            275.0
+          ],
+          [
+            180.0,
+            220.0,
+            283.25
+          ],
+          [
+            260.0,
+            220.0,
+            291.5
+          ],
+          [
+            340.0,
+            220.0,
+            299.75
+          ],
+          [
+            420.0,
+            220.0,
+            308.0
+          ],
+          [
+            500.0,
+            220.0,
+            316.25
+          ],
+          [
+            100.0,
+            280.0,
+            287.5
+          ],
+          [
+            180.0,
+            280.0,
+            295.75
+          ],
+          [
+            260.0,
+            280.0,
+            304.0
+          ],
+          [
+            340.0,
+            280.0,
+            312.25
+          ],
+          [
+            420.0,
+            280.0,
+            320.5
+          ],
+          [
+            500.0,
+            280.0,
+            328.75
+          ],
+          [
+            100.0,
+            340.0,
+            300.0
+          ],
+          [
+            180.0,
+            340.0,
+            308.25
+          ],
+          [
+            260.0,
+            340.0,
+            316.5
+          ],
+          [
+            340.0,
+            340.0,
+            324.75
+          ],
+          [
+            420.0,
+            340.0,
+            333.0
+          ],
+          [
+            500.0,
+            340.0,
+            341.25
+          ],
+          [
+            100.0,
+            400.0,
+            312.5
+          ],
+          [
+            180.0,
+            400.0,
+            320.75
+          ],
+          [
+            260.0,
+            400.0,
+            329.0
+          ],
+          [
+            340.0,
+            400.0,
+            337.25
+          ],
+          [
+            420.0,
+            400.0,
+            345.5
+          ],
+          [
+            500.0,
+            400.0,
+            353.75
+          ]
+        ]
+      },
+      "properties": {
+        "feature_id": "feat_grid_5",
+        "layer_id": "layer_grid_5",
+        "layer_name": "regular_grid_5",
+        "geometry_kind": "RegularGrid",
+        "byte_offset": 780,
+        "byte_length": 184,
+        "stream_lineage": "root",
+        "detector": "RegularGridDetector",
+        "confidence": 0.9565,
+        "grid_cols": 6,
+        "grid_rows": 6
+      }
+    }
+  ]
+}

@@ -1,0 +1,784 @@
+{
+  "metadata": {
+    "source_filename": "legacy_cad_gis_archive.oadc",
+    "file_size": 2036,
+    "sha256": "956bd03b32402dccf938a6762236415ff60d822d73a2bc26f50a0f897fb0c9df",
+    "detected_magic": "OADC (OpenArchive Vector Container)",
+    "format_family": "LEGACY_CAD_GIS_CONTAINER",
+    "overall_entropy": 5.3993,
+    "endianness_hint": "LITTLE_ENDIAN",
+    "tool_version": "0.2.1"
+  },
+  "coordinate_system": {
+    "crs_type": "PROJECTED_OR_GEOGRAPHIC_EPSG",
+    "epsg_hint": 3857,
+    "affine_matrix": [
+      1.0,
+      0.0,
+      0.0,
+      1.0,
+      500000.0,
+      4000000.0
+    ],
+    "units": "meters",
+    "provenance": {
+      "id": "prov_crs_0",
+      "span": {
+        "offset": 144,
+        "length": 52
+      },
+      "detector": "AffineCrsDetector",
+      "endianness": "LITTLE_ENDIAN",
+      "confidence": {
+        "composite": 0.918,
+        "internal_consistency": 0.96,
+        "pointer_validity": 1.0,
+        "entropy_score": 0.65,
+        "geometric_plausibility": 0.95,
+        "notes": [
+          "Recovered 2D affine transform & EPSG=3857",
+          "Region Shannon entropy = 1.673 bits/byte"
+        ]
+      },
+      "stream_lineage": "root",
+      "host_compressed_span": null
+    }
+  },
+  "global_bbox": {
+    "min_x": 80.0,
+    "min_y": 80.0,
+    "max_x": 520.0,
+    "max_y": 440.0,
+    "min_z": null,
+    "max_z": null
+  },
+  "entropy_profile": [
+    {
+      "offset": 0,
+      "length": 256,
+      "shannon_entropy": 2.5963,
+      "classification": "MEDIUM_MIXED"
+    },
+    {
+      "offset": 256,
+      "length": 256,
+      "shannon_entropy": 2.4053,
+      "classification": "MEDIUM_MIXED"
+    },
+    {
+      "offset": 512,
+      "length": 256,
+      "shannon_entropy": 3.8884,
+      "classification": "MEDIUM_MIXED"
+    },
+    {
+      "offset": 768,
+      "length": 256,
+      "shannon_entropy": 3.5527,
+      "classification": "MEDIUM_MIXED"
+    },
+    {
+      "offset": 1024,
+      "length": 256,
+      "shannon_entropy": 4.2594,
+      "classification": "MEDIUM_MIXED"
+    },
+    {
+      "offset": 1280,
+      "length": 256,
+      "shannon_entropy": 4.2063,
+      "classification": "MEDIUM_MIXED"
+    },
+    {
+      "offset": 1536,
+      "length": 256,
+      "shannon_entropy": 4.4788,
+      "classification": "MEDIUM_MIXED"
+    },
+    {
+      "offset": 1792,
+      "length": 244,
+      "shannon_entropy": 7.9307,
+      "classification": "HIGH_COMPRESSED_OR_OPAQUE"
+    }
+  ],
+  "decompressed_streams": [],
+  "layers": [
+    {
+      "id": "layer_0_1",
+      "name": "parcel_polygons",
+      "style_stroke": "#0284c7",
+      "style_fill": "rgba(2, 132, 199, 0.15)",
+      "features": [
+        {
+          "id": "feat_1_0",
+          "layer_id": "layer_0_1",
+          "geometry": {
+            "type": "Polygon",
+            "data": {
+              "rings": [
+                [
+                  [
+                    120.0,
+                    140.0
+                  ],
+                  [
+                    260.0,
+                    140.0
+                  ],
+                  [
+                    280.0,
+                    260.0
+                  ],
+                  [
+                    140.0,
+                    280.0
+                  ],
+                  [
+                    120.0,
+                    140.0
+                  ]
+                ]
+              ]
+            }
+          },
+          "bbox": {
+            "min_x": 120.0,
+            "min_y": 140.0,
+            "max_x": 280.0,
+            "max_y": 280.0,
+            "min_z": null,
+            "max_z": null
+          },
+          "properties": {
+            "record_id": 101,
+            "layer": "parcel_polygons",
+            "stream_lineage": "root"
+          },
+          "provenance": {
+            "id": "prov_feat_1_0",
+            "span": {
+              "offset": 220,
+              "length": 88
+            },
+            "detector": "StructuredVectorSectionDetector",
+            "endianness": "LITTLE_ENDIAN",
+            "confidence": {
+              "composite": 0.883,
+              "internal_consistency": 0.96,
+              "pointer_validity": 1.0,
+              "entropy_score": 0.65,
+              "geometric_plausibility": 0.85,
+              "notes": [
+                "No extreme erratic jumps across bounding box",
+                "Forms closed polygon ring",
+                "Bounds match plausible Cartesian/Projected domain",
+                "Region Shannon entropy = 1.774 bits/byte"
+              ]
+            },
+            "stream_lineage": "root",
+            "host_compressed_span": null
+          }
+        },
+        {
+          "id": "feat_1_1",
+          "layer_id": "layer_0_1",
+          "geometry": {
+            "type": "Polygon",
+            "data": {
+              "rings": [
+                [
+                  [
+                    320.0,
+                    160.0
+                  ],
+                  [
+                    480.0,
+                    160.0
+                  ],
+                  [
+                    480.0,
+                    310.0
+                  ],
+                  [
+                    320.0,
+                    310.0
+                  ],
+                  [
+                    320.0,
+                    160.0
+                  ]
+                ]
+              ]
+            }
+          },
+          "bbox": {
+            "min_x": 320.0,
+            "min_y": 160.0,
+            "max_x": 480.0,
+            "max_y": 310.0,
+            "min_z": null,
+            "max_z": null
+          },
+          "properties": {
+            "record_id": 102,
+            "layer": "parcel_polygons",
+            "stream_lineage": "root"
+          },
+          "provenance": {
+            "id": "prov_feat_1_1",
+            "span": {
+              "offset": 308,
+              "length": 88
+            },
+            "detector": "StructuredVectorSectionDetector",
+            "endianness": "LITTLE_ENDIAN",
+            "confidence": {
+              "composite": 0.883,
+              "internal_consistency": 0.96,
+              "pointer_validity": 1.0,
+              "entropy_score": 0.65,
+              "geometric_plausibility": 0.85,
+              "notes": [
+                "No extreme erratic jumps across bounding box",
+                "Forms closed polygon ring",
+                "Bounds match plausible Cartesian/Projected domain",
+                "Region Shannon entropy = 1.542 bits/byte"
+              ]
+            },
+            "stream_lineage": "root",
+            "host_compressed_span": null
+          }
+        }
+      ],
+      "bbox": {
+        "min_x": 120.0,
+        "min_y": 140.0,
+        "max_x": 480.0,
+        "max_y": 310.0,
+        "min_z": null,
+        "max_z": null
+      }
+    },
+    {
+      "id": "layer_1_2",
+      "name": "road_centerlines",
+      "style_stroke": "#16a34a",
+      "style_fill": "rgba(22, 163, 74, 0.15)",
+      "features": [
+        {
+          "id": "feat_2_0",
+          "layer_id": "layer_1_2",
+          "geometry": {
+            "type": "LineString",
+            "data": {
+              "coords": [
+                [
+                  80.0,
+                  90.0
+                ],
+                [
+                  210.0,
+                  115.0
+                ],
+                [
+                  350.0,
+                  120.0
+                ],
+                [
+                  520.0,
+                  150.0
+                ]
+              ]
+            }
+          },
+          "bbox": {
+            "min_x": 80.0,
+            "min_y": 90.0,
+            "max_x": 520.0,
+            "max_y": 150.0,
+            "min_z": null,
+            "max_z": null
+          },
+          "properties": {
+            "record_id": 201,
+            "layer": "road_centerlines",
+            "stream_lineage": "root"
+          },
+          "provenance": {
+            "id": "prov_feat_2_0",
+            "span": {
+              "offset": 420,
+              "length": 72
+            },
+            "detector": "StructuredVectorSectionDetector",
+            "endianness": "LITTLE_ENDIAN",
+            "confidence": {
+              "composite": 0.918,
+              "internal_consistency": 0.96,
+              "pointer_validity": 1.0,
+              "entropy_score": 0.65,
+              "geometric_plausibility": 0.95,
+              "notes": [
+                "Smooth spatial continuity (mean_step/diag = 0.334)",
+                "No extreme erratic jumps across bounding box",
+                "Bounds match plausible Cartesian/Projected domain",
+                "Region Shannon entropy = 1.930 bits/byte"
+              ]
+            },
+            "stream_lineage": "root",
+            "host_compressed_span": null
+          }
+        },
+        {
+          "id": "feat_2_1",
+          "layer_id": "layer_1_2",
+          "geometry": {
+            "type": "LineString",
+            "data": {
+              "coords": [
+                [
+                  295.0,
+                  80.0
+                ],
+                [
+                  300.0,
+                  200.0
+                ],
+                [
+                  305.0,
+                  340.0
+                ],
+                [
+                  310.0,
+                  420.0
+                ]
+              ]
+            }
+          },
+          "bbox": {
+            "min_x": 295.0,
+            "min_y": 80.0,
+            "max_x": 310.0,
+            "max_y": 420.0,
+            "min_z": null,
+            "max_z": null
+          },
+          "properties": {
+            "record_id": 202,
+            "layer": "road_centerlines",
+            "stream_lineage": "root"
+          },
+          "provenance": {
+            "id": "prov_feat_2_1",
+            "span": {
+              "offset": 492,
+              "length": 72
+            },
+            "detector": "StructuredVectorSectionDetector",
+            "endianness": "LITTLE_ENDIAN",
+            "confidence": {
+              "composite": 0.918,
+              "internal_consistency": 0.96,
+              "pointer_validity": 1.0,
+              "entropy_score": 0.65,
+              "geometric_plausibility": 0.95,
+              "notes": [
+                "Smooth spatial continuity (mean_step/diag = 0.333)",
+                "No extreme erratic jumps across bounding box",
+                "Bounds match plausible Cartesian/Projected domain",
+                "Region Shannon entropy = 1.930 bits/byte"
+              ]
+            },
+            "stream_lineage": "root",
+            "host_compressed_span": null
+          }
+        }
+      ],
+      "bbox": {
+        "min_x": 80.0,
+        "min_y": 80.0,
+        "max_x": 520.0,
+        "max_y": 420.0,
+        "min_z": null,
+        "max_z": null
+      }
+    },
+    {
+      "id": "layer_2_3",
+      "name": "contour_splines",
+      "style_stroke": "#ea580c",
+      "style_fill": "rgba(234, 88, 12, 0.15)",
+      "features": [
+        {
+          "id": "feat_3_0",
+          "layer_id": "layer_2_3",
+          "geometry": {
+            "type": "CubicBezier",
+            "data": {
+              "control_points": [
+                [
+                  100.0,
+                  360.0
+                ],
+                [
+                  220.0,
+                  440.0
+                ],
+                [
+                  380.0,
+                  280.0
+                ],
+                [
+                  500.0,
+                  390.0
+                ]
+              ]
+            }
+          },
+          "bbox": {
+            "min_x": 100.0,
+            "min_y": 280.0,
+            "max_x": 500.0,
+            "max_y": 440.0,
+            "min_z": null,
+            "max_z": null
+          },
+          "properties": {
+            "record_id": 301,
+            "layer": "contour_splines",
+            "stream_lineage": "root"
+          },
+          "provenance": {
+            "id": "prov_feat_3_0",
+            "span": {
+              "offset": 588,
+              "length": 72
+            },
+            "detector": "StructuredVectorSectionDetector",
+            "endianness": "LITTLE_ENDIAN",
+            "confidence": {
+              "composite": 0.963,
+              "internal_consistency": 0.96,
+              "pointer_validity": 1.0,
+              "entropy_score": 0.95,
+              "geometric_plausibility": 0.95,
+              "notes": [
+                "Smooth spatial continuity (mean_step/diag = 0.413)",
+                "No extreme erratic jumps across bounding box",
+                "Bounds match plausible Cartesian/Projected domain",
+                "Region Shannon entropy = 2.134 bits/byte"
+              ]
+            },
+            "stream_lineage": "root",
+            "host_compressed_span": null
+          }
+        }
+      ],
+      "bbox": {
+        "min_x": 100.0,
+        "min_y": 280.0,
+        "max_x": 500.0,
+        "max_y": 440.0,
+        "min_z": null,
+        "max_z": null
+      }
+    },
+    {
+      "id": "layer_grid_5",
+      "name": "regular_grid_5",
+      "style_stroke": "#9333ea",
+      "style_fill": "rgba(147, 51, 234, 0.15)",
+      "features": [
+        {
+          "id": "feat_grid_5",
+          "layer_id": "layer_grid_5",
+          "geometry": {
+            "type": "RegularGrid",
+            "data": {
+              "origin": [
+                100.0,
+                100.0
+              ],
+              "spacing": [
+                80.0,
+                60.0
+              ],
+              "dims": [
+                6,
+                6
+              ],
+              "values": [
+                250.0,
+                258.25,
+                266.5,
+                274.75,
+                283.0,
+                291.25,
+                262.5,
+                270.75,
+                279.0,
+                287.25,
+                295.5,
+                303.75,
+                275.0,
+                283.25,
+                291.5,
+                299.75,
+                308.0,
+                316.25,
+                287.5,
+                295.75,
+                304.0,
+                312.25,
+                320.5,
+                328.75,
+                300.0,
+                308.25,
+                316.5,
+                324.75,
+                333.0,
+                341.25,
+                312.5,
+                320.75,
+                329.0,
+                337.25,
+                345.5,
+                353.75
+              ]
+            }
+          },
+          "bbox": {
+            "min_x": 100.0,
+            "min_y": 100.0,
+            "max_x": 500.0,
+            "max_y": 400.0,
+            "min_z": null,
+            "max_z": null
+          },
+          "properties": {
+            "grid_cols": 6,
+            "grid_rows": 6,
+            "stream_lineage": "root"
+          },
+          "provenance": {
+            "id": "prov_grid_5",
+            "span": {
+              "offset": 780,
+              "length": 184
+            },
+            "detector": "RegularGridDetector",
+            "endianness": "LITTLE_ENDIAN",
+            "confidence": {
+              "composite": 0.9565,
+              "internal_consistency": 0.95,
+              "pointer_validity": 1.0,
+              "entropy_score": 0.95,
+              "geometric_plausibility": 0.94,
+              "notes": [
+                "Regular 6x6 float32 lattice with spacing (80.0, 60.0)",
+                "Region Shannon entropy = 3.542 bits/byte"
+              ]
+            },
+            "stream_lineage": "root",
+            "host_compressed_span": null
+          }
+        }
+      ],
+      "bbox": {
+        "min_x": 100.0,
+        "min_y": 100.0,
+        "max_x": 500.0,
+        "max_y": 400.0,
+        "min_z": null,
+        "max_z": null
+      }
+    }
+  ],
+  "attribute_tables": [
+    {
+      "id": "table_4",
+      "name": "recovered_attributes_4",
+      "record_stride": 24,
+      "record_count": 5,
+      "columns": [
+        {
+          "name": "record_id",
+          "data_type": "UINT32",
+          "byte_offset_in_record": 0,
+          "byte_width": 4
+        },
+        {
+          "name": "measurement",
+          "data_type": "FLOAT32",
+          "byte_offset_in_record": 4,
+          "byte_width": 4
+        },
+        {
+          "name": "label",
+          "data_type": "ASCII_16",
+          "byte_offset_in_record": 8,
+          "byte_width": 16
+        }
+      ],
+      "rows": [
+        {
+          "record_id": 101,
+          "measurement": 142.75,
+          "label": "PARCEL_NORTH_A"
+        },
+        {
+          "record_id": 102,
+          "measurement": 198.5,
+          "label": "PARCEL_EAST_B"
+        },
+        {
+          "record_id": 201,
+          "measurement": 12.4,
+          "label": "ARTERIAL_RD_1"
+        },
+        {
+          "record_id": 202,
+          "measurement": 9.8,
+          "label": "COLLECTOR_RD_2"
+        },
+        {
+          "record_id": 301,
+          "measurement": 315.0,
+          "label": "RIDGE_CONTOUR"
+        }
+      ],
+      "provenance": {
+        "id": "prov_table_4",
+        "span": {
+          "offset": 660,
+          "length": 120
+        },
+        "detector": "RepeatingRecordDetector",
+        "endianness": "LITTLE_ENDIAN",
+        "confidence": {
+          "composite": 0.9425,
+          "internal_consistency": 0.95,
+          "pointer_validity": 1.0,
+          "entropy_score": 0.95,
+          "geometric_plausibility": 0.9,
+          "notes": [
+            "Fixed stride = 24 bytes across 5 records",
+            "Region Shannon entropy = 4.184 bits/byte"
+          ]
+        },
+        "stream_lineage": "root",
+        "host_compressed_span": null
+      }
+    }
+  ],
+  "raster_tiles": [
+    {
+      "id": "raster_tile_6",
+      "width": 16,
+      "height": 16,
+      "channels": 3,
+      "bit_depth": 8,
+      "format": "RAW_RGB8",
+      "georef_bbox": {
+        "min_x": 100.0,
+        "min_y": 100.0,
+        "max_x": 500.0,
+        "max_y": 420.0,
+        "min_z": null,
+        "max_z": null
+      },
+      "exported_path": "raster_tile_6.tiff",
+      "provenance": {
+        "id": "prov_raster_6",
+        "span": {
+          "offset": 964,
+          "length": 816
+        },
+        "detector": "RasterTileDetector",
+        "endianness": "LITTLE_ENDIAN",
+        "confidence": {
+          "composite": 0.9525,
+          "internal_consistency": 0.96,
+          "pointer_validity": 1.0,
+          "entropy_score": 0.95,
+          "geometric_plausibility": 0.92,
+          "notes": [
+            "Recovered 16x16x3 uncompressed raster tile",
+            "Region Shannon entropy = 4.607 bits/byte"
+          ]
+        },
+        "stream_lineage": "root",
+        "host_compressed_span": null
+      }
+    }
+  ],
+  "embedded_assets": [
+    {
+      "id": "asset_offset_dir_0",
+      "kind": "OFFSET_TABLE",
+      "description": "Validated section pointer directory (8 entries, v1)",
+      "entropy": 1.9023,
+      "is_opaque": false,
+      "metadata": {
+        "container_version": 1,
+        "section_count": 8,
+        "valid_pointers": 8
+      },
+      "provenance": {
+        "id": "prov_offset_dir_0",
+        "span": {
+          "offset": 16,
+          "length": 128
+        },
+        "detector": "PointerTableValidator",
+        "endianness": "LITTLE_ENDIAN",
+        "confidence": {
+          "composite": 0.924,
+          "internal_consistency": 0.98,
+          "pointer_validity": 1.0,
+          "entropy_score": 0.65,
+          "geometric_plausibility": 0.95,
+          "notes": [
+            "8/8 section pointers resolve cleanly within stream bounds",
+            "Region Shannon entropy = 1.902 bits/byte"
+          ]
+        },
+        "stream_lineage": "root",
+        "host_compressed_span": null
+      }
+    },
+    {
+      "id": "asset_opaque_7",
+      "kind": "OPAQUE_COMPRESSED_OR_ENCRYPTED",
+      "description": "Opaque/encrypted payload block (entropy 8.00 bits/byte); preserved as-is without decryption attempt",
+      "entropy": 8.0,
+      "is_opaque": true,
+      "metadata": {
+        "section_type_tag": 99,
+        "section_flags": 57005
+      },
+      "provenance": {
+        "id": "prov_opaque_7",
+        "span": {
+          "offset": 1780,
+          "length": 256
+        },
+        "detector": "EntropyOpaqueClassifier",
+        "endianness": "UNKNOWN",
+        "confidence": {
+          "composite": 0.925,
+          "internal_consistency": 0.95,
+          "pointer_validity": 1.0,
+          "entropy_score": 0.95,
+          "geometric_plausibility": 0.85,
+          "notes": [
+            "High Shannon entropy (8.000 bits/byte) not matching standard Deflate/zlib/gzip streams"
+          ]
+        },
+        "stream_lineage": "root",
+        "host_compressed_span": null
+      }
+    }
+  ]
+}

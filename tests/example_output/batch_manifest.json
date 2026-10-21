@@ -1,0 +1,54 @@
+[
+  {
+    "source_file": "compressed_nested_archive.bin",
+    "sha256": "f9c23d55ed6e581a28a9f4c7fb87bcc5dd9d3f5aab1aa70cfa6cbac809b206a8",
+    "file_size": 1515,
+    "detected_magic": "UNKNOWN (0x434d505801000000)",
+    "decompressed_streams_carved": 3,
+    "layers_recovered": 3,
+    "features_recovered": 3,
+    "attribute_tables_recovered": 1,
+    "raster_tiles_recovered": 0,
+    "opaque_regions_flagged": 0,
+    "output_directory": "C:\\Users\\Jenna Dooley\\.gemini\\antigravity\\scratch\\stability\\tests\\example_output\\compressed_nested_archive"
+  },
+  {
+    "source_file": "legacy_cad_gis_archive.oadc",
+    "sha256": "956bd03b32402dccf938a6762236415ff60d822d73a2bc26f50a0f897fb0c9df",
+    "file_size": 2036,
+    "detected_magic": "OADC (OpenArchive Vector Container)",
+    "decompressed_streams_carved": 0,
+    "layers_recovered": 4,
+    "features_recovered": 6,
+    "attribute_tables_recovered": 1,
+    "raster_tiles_recovered": 1,
+    "opaque_regions_flagged": 1,
+    "output_directory": "C:\\Users\\Jenna Dooley\\.gemini\\antigravity\\scratch\\stability\\tests\\example_output\\legacy_cad_gis_archive"
+  },
+  {
+    "source_file": "municipal_parcels.shp",
+    "sha256": "a46eb628292548b3b6391a037e9b5acf04276ed105c2b6b24e1cb47268059c39",
+    "file_size": 236,
+    "detected_magic": "0x0000270A (Esri Shapefile Main Header)",
+    "decompressed_streams_carved": 0,
+    "layers_recovered": 1,
+    "features_recovered": 1,
+    "attribute_tables_recovered": 0,
+    "raster_tiles_recovered": 0,
+    "opaque_regions_flagged": 0,
+    "output_directory": "C:\\Users\\Jenna Dooley\\.gemini\\antigravity\\scratch\\stability\\tests\\example_output\\municipal_parcels"
+  },
+  {
+    "source_file": "raw_telemetry_dump.bin",
+    "sha256": "36657a0fe84db3edc5abf82bb6d82d543f3ba723573b224a9d62f87180617c13",
+    "file_size": 232,
+    "detected_magic": "UNKNOWN (0x5241575601000000)",
+    "decompressed_streams_carved": 0,
+    "layers_recovered": 1,
+    "features_recovered": 1,
+    "attribute_tables_recovered": 1,
+    "raster_tiles_recovered": 0,
+    "opaque_regions_flagged": 0,
+    "output_directory": "C:\\Users\\Jenna Dooley\\.gemini\\antigravity\\scratch\\stability\\tests\\example_output\\raw_telemetry_dump"
+  }
+]

@@ -1,0 +1,239 @@
+{
+  "metadata": {
+    "source_filename": "raw_telemetry_dump.bin",
+    "file_size": 232,
+    "sha256": "36657a0fe84db3edc5abf82bb6d82d543f3ba723573b224a9d62f87180617c13",
+    "detected_magic": "UNKNOWN (0x5241575601000000)",
+    "format_family": "GENERIC_STRUCTURED_BINARY",
+    "overall_entropy": 2.8434,
+    "endianness_hint": "LITTLE_ENDIAN",
+    "tool_version": "0.2.1"
+  },
+  "coordinate_system": {
+    "crs_type": "LOCAL_CARTESIAN",
+    "epsg_hint": null,
+    "affine_matrix": null,
+    "units": "units",
+    "provenance": null
+  },
+  "global_bbox": {
+    "min_x": 1000.0,
+    "min_y": 2000.0,
+    "max_x": 1300.0,
+    "max_y": 2200.0,
+    "min_z": null,
+    "max_z": null
+  },
+  "entropy_profile": [
+    {
+      "offset": 0,
+      "length": 232,
+      "shannon_entropy": 2.8434,
+      "classification": "MEDIUM_MIXED"
+    }
+  ],
+  "decompressed_streams": [],
+  "layers": [
+    {
+      "id": "layer_heuristic_f64",
+      "name": "heuristic_coordinate_runs",
+      "style_stroke": "#0284c7",
+      "style_fill": "rgba(2, 132, 199, 0.15)",
+      "features": [
+        {
+          "id": "feat_f64_0_0x24",
+          "layer_id": "layer_heuristic_f64",
+          "geometry": {
+            "type": "LineString",
+            "data": {
+              "coords": [
+                [
+                  1000.0,
+                  2000.0
+                ],
+                [
+                  1050.5,
+                  2045.25
+                ],
+                [
+                  1110.0,
+                  2080.75
+                ],
+                [
+                  1180.25,
+                  2100.0
+                ],
+                [
+                  1240.0,
+                  2150.5
+                ],
+                [
+                  1300.0,
+                  2200.0
+                ]
+              ]
+            }
+          },
+          "bbox": {
+            "min_x": 1000.0,
+            "min_y": 2000.0,
+            "max_x": 1300.0,
+            "max_y": 2200.0,
+            "min_z": null,
+            "max_z": null
+          },
+          "properties": {
+            "vertex_count": 6,
+            "encoding": "LENGTH_PREFIXED_F64_LE",
+            "stream_lineage": "root"
+          },
+          "provenance": {
+            "id": "prov_f64_0_0x24",
+            "span": {
+              "offset": 36,
+              "length": 100
+            },
+            "detector": "SlidingWindowFloat64Detector",
+            "endianness": "LITTLE_ENDIAN",
+            "confidence": {
+              "composite": 0.921,
+              "internal_consistency": 0.92,
+              "pointer_validity": 0.85,
+              "entropy_score": 0.95,
+              "geometric_plausibility": 0.95,
+              "notes": [
+                "Smooth spatial continuity (mean_step/diag = 0.203)",
+                "No extreme erratic jumps across bounding box",
+                "Bounds match plausible Cartesian/Projected domain",
+                "Region Shannon entropy = 2.352 bits/byte"
+              ]
+            },
+            "stream_lineage": "root",
+            "host_compressed_span": null
+          }
+        }
+      ],
+      "bbox": {
+        "min_x": 1000.0,
+        "min_y": 2000.0,
+        "max_x": 1300.0,
+        "max_y": 2200.0,
+        "min_z": null,
+        "max_z": null
+      }
+    }
+  ],
+  "attribute_tables": [
+    {
+      "id": "table_heuristic_0_0x88",
+      "name": "heuristic_records_0x88",
+      "record_stride": 24,
+      "record_count": 4,
+      "columns": [
+        {
+          "name": "record_id",
+          "data_type": "UINT32",
+          "byte_offset_in_record": 0,
+          "byte_width": 4
+        },
+        {
+          "name": "field_f32",
+          "data_type": "FLOAT32",
+          "byte_offset_in_record": 4,
+          "byte_width": 4
+        },
+        {
+          "name": "ascii_payload",
+          "data_type": "ASCII",
+          "byte_offset_in_record": 8,
+          "byte_width": 16
+        }
+      ],
+      "rows": [
+        {
+          "record_id": 1,
+          "field_f32": 15.5,
+          "ascii_payload": "NODE_01"
+        },
+        {
+          "record_id": 2,
+          "field_f32": 31.0,
+          "ascii_payload": "NODE_02"
+        },
+        {
+          "record_id": 3,
+          "field_f32": 46.5,
+          "ascii_payload": "NODE_03"
+        },
+        {
+          "record_id": 4,
+          "field_f32": 62.0,
+          "ascii_payload": "NODE_04"
+        }
+      ],
+      "provenance": {
+        "id": "prov_table_0_0x88",
+        "span": {
+          "offset": 136,
+          "length": 96
+        },
+        "detector": "SlidingStrideRecordDetector",
+        "endianness": "LITTLE_ENDIAN",
+        "confidence": {
+          "composite": 0.88,
+          "internal_consistency": 0.9,
+          "pointer_validity": 0.85,
+          "entropy_score": 0.95,
+          "geometric_plausibility": 0.85,
+          "notes": [
+            "Sequential u32 key with fixed stride 24 across 4 records",
+            "Region Shannon entropy = 2.635 bits/byte"
+          ]
+        },
+        "stream_lineage": "root",
+        "host_compressed_span": null
+      }
+    }
+  ],
+  "raster_tiles": [],
+  "embedded_assets": [
+    {
+      "id": "asset_ptrtab_0_0x10",
+      "kind": "OFFSET_TABLE",
+      "description": "Monotonic u32 offset table (4 valid stream pointers)",
+      "entropy": 1.3918,
+      "is_opaque": false,
+      "metadata": {
+        "pointer_count": 4,
+        "pointers": [
+          36,
+          136,
+          160,
+          184
+        ]
+      },
+      "provenance": {
+        "id": "prov_ptrtab_0_0x10",
+        "span": {
+          "offset": 16,
+          "length": 20
+        },
+        "detector": "SlidingOffsetTableDetector",
+        "endianness": "LITTLE_ENDIAN",
+        "confidence": {
+          "composite": 0.871,
+          "internal_consistency": 0.92,
+          "pointer_validity": 1.0,
+          "entropy_score": 0.65,
+          "geometric_plausibility": 0.85,
+          "notes": [
+            "4 strictly increasing offsets within stream size 232",
+            "Region Shannon entropy = 1.392 bits/byte"
+          ]
+        },
+        "stream_lineage": "root",
+        "host_compressed_span": null
+      }
+    }
+  ]
+}

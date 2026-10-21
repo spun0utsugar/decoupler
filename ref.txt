@@ -1,0 +1,123 @@
+**A practical architecture for a Multi-Format Open Archive Decoupler**
+
+Goal: one local, zero-dependency binary (or single-folder tool) that takes opaque structured binaries, discovers internal layouts via pattern recognition + heuristics, and emits lossless modern open formats (SVG / GeoJSON / SQLite / plain text / PNG/TIFF where relevant) without ever needing the original software.
+
+### 1. Core Design Principles
+- **Zero external runtime deps** at the end-user level → ship as a single static binary (Go, Rust, or Zig) or a self-contained Python + pure-Python pure-data stack if you accept a larger footprint.
+- **Read-only + lossless** by default. Never mutate the source file.
+- **Format-agnostic core + pluggable detectors**. The engine does not hard-code every proprietary format; it has a discovery layer that proposes candidate structures, then specialized extractors that confirm and emit.
+- **Human-auditable intermediate representation**. Everything becomes a typed graph / tables of primitives before final export.
+- **Deterministic & offline**. No network, no cloud, no license servers.
+
+### 2. High-Level Pipeline
+```
+Input binary
+    ↓
+1. Magic / header / entropy / structural scan
+    ↓
+2. Candidate structure hypotheses (coordinate grids, tables, blocks, streams)
+    ↓
+3. Validation & scoring (does this look like vectors? points? raster tiles? metadata?)
+    ↓
+4. Typed Intermediate Representation (IR)
+    ↓
+5. Lossless exporters → SVG / GeoJSON / SQLite / TXT / image containers
+```
+
+### 3. Technology Choices (recommended stack)
+| Layer              | Choice                          | Why |
+|--------------------|---------------------------------|-----|
+| Language           | Rust (preferred) or Go          | Static binary, memory safety, excellent binary parsing crates, zero-dep shipping |
+| Binary parsing     | `nom` / `binrw` / `scroll` (Rust) or pure Go `encoding/binary` + custom | Composable parsers |
+| Pattern discovery  | Custom heuristics + optional small ML (ONNX Runtime static) or pure statistical | No heavy ML framework |
+| Geometry           | `geo` / `rstar` / `earcut` or pure math | Coordinate handling |
+| Export             | Own SVG writer, `geojson`, SQLite (rusqlite or pure), std text | Keep deps minimal |
+| GUI (optional)     | `egui` / `iced` or just CLI + simple web UI via `axum` + static files | Local only |
+
+If you want maximum accessibility and still near-zero deps, a pure-Python version with only the standard library + a few pure-Python pure-data modules is feasible for the first prototypes, then re-implement hot paths in Rust.
+
+### 4. Key Technical Components
+
+**A. Structural Pattern Recognition Engine**
+- **Header & magic scan**: known signatures + entropy analysis to find compressed/encrypted regions.
+- **Sliding-window statistical probes**:
+  - Look for runs of IEEE-754 floats / doubles that form plausible coordinate sequences (x,y or x,y,z).
+  - Detect repeating record lengths (common in CAD/GIS table formats).
+  - Find length-prefixed blocks, offset tables, and cross-referenced pointers.
+  - Identify grid-like 2-D arrays (common in raster + height-field + tile data).
+- **Coordinate grid detection**:
+  - Cluster of points that form regular or semi-regular lattices.
+  - Bounding-box + scale/offset recovery.
+  - Axis-aligned vs rotated detection via PCA or simple angle histograms.
+- **Vector table heuristics**:
+  - Sequences of (type, count, points…) that match common polyline / polygon / bezier encodings.
+  - Closed-ring detection, self-intersection checks for validation.
+- **Asset block discovery**:
+  - Embedded images (JPEG/PNG signatures inside the binary).
+  - Font tables, texture atlases, material definitions, layer metadata.
+- Scoring function: each hypothesis gets a confidence score based on internal consistency (pointer validity, range checks, geometric sanity, entropy of residual data).
+
+**B. Intermediate Representation (IR)**
+A simple, strongly-typed model that is format-agnostic:
+```
+Document {
+  metadata: key-value + provenance
+  layers / groups
+  geometries: Point, LineString, Polygon, Multi*, Bezier, Mesh, Grid
+  attributes: tables (name → typed columns)
+  rasters: tiles or full images with geo-referencing
+  assets: embedded files with offsets
+  coordinate_system: optional CRS hints or affine transforms
+}
+```
+Everything is stored with original numeric precision (f32/f64/i32 etc.) so the export is lossless.
+
+**C. Specialized Extractors (the “plugins”)**
+Start with a few high-value families and grow:
+1. **Legacy CAD / vector** (early AutoCAD, MicroStation, proprietary drawing formats) → polylines, arcs, text, layers → SVG + SQLite attribute tables.
+2. **GIS / map** (old shapefile variants, proprietary vector tiles, early MapInfo, some military formats) → GeoJSON + SQLite.
+3. **RAW / camera container** (proprietary RAW wrappers that are mostly TIFF-like + metadata) → DNG or plain TIFF + EXIF/XMP as text/SQLite.
+4. **Modular project files** (old 3D scene graphs, animation blocks, game asset packs) → hierarchy as JSON/TXT + meshes as OBJ/glTF-like or simple binary tables.
+
+Each extractor is a pure function: `bytes → Option<IR>` with confidence.
+
+**D. Exporters (always lossless)**
+- **SVG**: geometries + styles + groups. Use absolute coordinates or a recovered viewBox.
+- **GeoJSON**: FeatureCollection with properties; preserve original numeric types where possible.
+- **SQLite**: one table per attribute set + a geometry table (WKB or simple text WKT) + a metadata table that records original offsets and confidence scores.
+- **Plain TXT / JSON**: human-readable dumps of every discovered structure for audit.
+- Optional: PNG/TIFF for any recovered raster tiles, with sidecar world files or GeoTIFF tags if geo-referencing was found.
+
+### 5. Implementation Roadmap (realistic order)
+1. **Scaffold** – CLI that takes a file, dumps hex + basic stats (entropy, magic, possible float runs).
+2. **Generic structure finder** – implement the statistical probes and produce candidate regions.
+3. **IR + one solid exporter** – start with SVG or GeoJSON so you can visually verify results.
+4. **First real format family** – pick one common legacy CAD or GIS format you actually have samples of and write a high-confidence extractor.
+5. **Validation harness** – round-trip tests: extract → re-export synthetic → compare geometric error (should be 0 within floating-point).
+6. **Batch mode + reporting** – process folders, produce a manifest of what was found and confidence.
+7. **Optional GUI** – drop zone + preview of recovered layers + export buttons.
+8. **Expand extractors** – add more formats as samples become available; keep the core discovery engine shared.
+
+### 6. Hard Problems & Mitigations
+- **Encrypted or heavily compressed proprietary blobs** → detect and report “opaque region”; never try to break crypto.
+- **Ambiguous structures** → always emit the IR + confidence scores and the original byte ranges so a human can inspect.
+- **Floating-point precision / unit recovery** → keep original values; only apply affine transforms when you have strong evidence (e.g., known header scale factors).
+- **Huge files** → memory-map + streaming parsers; process in chunks.
+- **False positives** → geometric sanity checks + residual entropy after extraction.
+- **Legal / ethical** – the tool only reads; it does not circumvent DRM or active protection. Document that clearly.
+
+### 7. Packaging & Distribution
+- Single static binary (`decouple` or `openarchive`).
+- Optional: a small “format pack” directory of additional pure-data extractor modules that can be dropped in.
+- Manifest / provenance file written alongside every export so future users know exactly which version of the tool and which heuristics produced the result.
+
+### 8. Minimal Viable Product (what you can ship first)
+A CLI that:
+- Accepts any file,
+- Finds plausible coordinate sequences and vector-like tables,
+- Dumps them as SVG + a SQLite database of attributes + a text report of every discovered block with byte offsets and confidence,
+- Works completely offline and has zero external dependencies beyond the OS.
+
+From there you iteratively add higher-confidence extractors for the specific legacy formats you care about most.
+
+This approach turns the “brittle abandonware” problem into a maintainable, inspectable, extensible open tool. The structural recognition layer is the real invention; the per-format extractors are just the growing knowledge base on top of it.

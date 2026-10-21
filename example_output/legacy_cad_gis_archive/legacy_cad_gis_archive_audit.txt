@@ -1,0 +1,97 @@
+================================================================================
+ OPENARCHIVE DECOUPLER — STRUCTURAL BINARY AUDIT REPORT
+================================================================================
+Source File      : legacy_cad_gis_archive.oadc
+File Size        : 2036 bytes
+SHA-256 Digest   : 956bd03b32402dccf938a6762236415ff60d822d73a2bc26f50a0f897fb0c9df
+Detected Magic   : OADC (OpenArchive Vector Container)
+Format Family    : LEGACY_CAD_GIS_CONTAINER
+Overall Entropy  : 5.3993 bits/byte
+Endianness Hint  : LITTLE_ENDIAN
+CRS Hint         : PROJECTED_OR_GEOGRAPHIC_EPSG (meters)
+EPSG Code Hint   : EPSG:3857
+Affine Matrix    : [a=1.000000, b=0.000000, c=0.000000, d=1.000000, tx=500000.000000, ty=4000000.000000]
+Global BBox      : min=(80.0, 80.0), max=(520.0, 440.0)
+Carved Streams   : 0 decompressed virtual sub-stream(s)
+
+--------------------------------------------------------------------------------
+ 1. RECOVERED VECTOR LAYERS & GEOMETRIC STRUCTURES (4 layers, 6 features)
+--------------------------------------------------------------------------------
+
+[Layer layer_0_1] name="parcel_polygons" features=2 stroke=#0284c7
+  - Feature feat_1_0           | Kind: Polygon        | Vertices: 5     | Bytes: 0x0000dc..0x000134 (88 B) | Confidence: 0.8830
+    Detector: StructuredVectorSectionDetector | Lineage: root | Breakdown: [consistency=0.96, ptr=1.00, entropy=0.65, geom=0.85]
+    * No extreme erratic jumps across bounding box
+    * Forms closed polygon ring
+    * Bounds match plausible Cartesian/Projected domain
+    * Region Shannon entropy = 1.774 bits/byte
+  - Feature feat_1_1           | Kind: Polygon        | Vertices: 5     | Bytes: 0x000134..0x00018c (88 B) | Confidence: 0.8830
+    Detector: StructuredVectorSectionDetector | Lineage: root | Breakdown: [consistency=0.96, ptr=1.00, entropy=0.65, geom=0.85]
+    * No extreme erratic jumps across bounding box
+    * Forms closed polygon ring
+    * Bounds match plausible Cartesian/Projected domain
+    * Region Shannon entropy = 1.542 bits/byte
+
+[Layer layer_1_2] name="road_centerlines" features=2 stroke=#16a34a
+  - Feature feat_2_0           | Kind: LineString     | Vertices: 4     | Bytes: 0x0001a4..0x0001ec (72 B) | Confidence: 0.9180
+    Detector: StructuredVectorSectionDetector | Lineage: root | Breakdown: [consistency=0.96, ptr=1.00, entropy=0.65, geom=0.95]
+    * Smooth spatial continuity (mean_step/diag = 0.334)
+    * No extreme erratic jumps across bounding box
+    * Bounds match plausible Cartesian/Projected domain
+    * Region Shannon entropy = 1.930 bits/byte
+  - Feature feat_2_1           | Kind: LineString     | Vertices: 4     | Bytes: 0x0001ec..0x000234 (72 B) | Confidence: 0.9180
+    Detector: StructuredVectorSectionDetector | Lineage: root | Breakdown: [consistency=0.96, ptr=1.00, entropy=0.65, geom=0.95]
+    * Smooth spatial continuity (mean_step/diag = 0.333)
+    * No extreme erratic jumps across bounding box
+    * Bounds match plausible Cartesian/Projected domain
+    * Region Shannon entropy = 1.930 bits/byte
+
+[Layer layer_2_3] name="contour_splines" features=1 stroke=#ea580c
+  - Feature feat_3_0           | Kind: CubicBezier    | Vertices: 4     | Bytes: 0x00024c..0x000294 (72 B) | Confidence: 0.9630
+    Detector: StructuredVectorSectionDetector | Lineage: root | Breakdown: [consistency=0.96, ptr=1.00, entropy=0.95, geom=0.95]
+    * Smooth spatial continuity (mean_step/diag = 0.413)
+    * No extreme erratic jumps across bounding box
+    * Bounds match plausible Cartesian/Projected domain
+    * Region Shannon entropy = 2.134 bits/byte
+
+[Layer layer_grid_5] name="regular_grid_5" features=1 stroke=#9333ea
+  - Feature feat_grid_5        | Kind: RegularGrid    | Vertices: 36    | Bytes: 0x00030c..0x0003c4 (184 B) | Confidence: 0.9565
+    Detector: RegularGridDetector | Lineage: root | Breakdown: [consistency=0.95, ptr=1.00, entropy=0.95, geom=0.94]
+    * Regular 6x6 float32 lattice with spacing (80.0, 60.0)
+    * Region Shannon entropy = 3.542 bits/byte
+
+--------------------------------------------------------------------------------
+ 2. RECOVERED ATTRIBUTE TABLES (1 tables)
+--------------------------------------------------------------------------------
+
+[Table table_4] name="recovered_attributes_4" stride=24B rows=5 | Lineage: root | Bytes: 0x000294..0x00030c (120 B) | Confidence: 0.9425
+  Row 0  : {"record_id": 101, "measurement": 142.75, "label": "PARCEL_NORTH_A"}
+  Row 1  : {"record_id": 102, "measurement": 198.5, "label": "PARCEL_EAST_B"}
+  Row 2  : {"record_id": 201, "measurement": 12.4, "label": "ARTERIAL_RD_1"}
+  Row 3  : {"record_id": 202, "measurement": 9.8, "label": "COLLECTOR_RD_2"}
+  Row 4  : {"record_id": 301, "measurement": 315.0, "label": "RIDGE_CONTOUR"}
+
+--------------------------------------------------------------------------------
+ 3. RECOVERED RASTER TILES (1 tiles)
+--------------------------------------------------------------------------------
+  - Raster raster_tile_6    | 16x16x3 (RAW_RGB8) | Lineage: root | Bytes: 0x0003c4..0x0006f4 (816 B) | Confidence: 0.9525 | Exported: raster_tile_6.tiff
+
+--------------------------------------------------------------------------------
+ 4. EMBEDDED ASSETS, POINTER TABLES & OPAQUE REGIONS (2 blocks)
+--------------------------------------------------------------------------------
+  - Asset asset_offset_dir_0 | Kind: OFFSET_TABLE                   | Opaque: False | Entropy: 1.902 | Lineage: root | Bytes: 0x000010..0x000090 (128 B) | Confidence: 0.9240
+    Description: Validated section pointer directory (8 entries, v1)
+  - Asset asset_opaque_7     | Kind: OPAQUE_COMPRESSED_OR_ENCRYPTED | Opaque: True  | Entropy: 8.000 | Lineage: root | Bytes: 0x0006f4..0x0007f4 (256 B) | Confidence: 0.9250
+    Description: Opaque/encrypted payload block (entropy 8.00 bits/byte); preserved as-is without decryption attempt
+
+--------------------------------------------------------------------------------
+ 5. ENTROPY PROFILE (8 windows)
+--------------------------------------------------------------------------------
+  Bytes 0x000000..0x000100 ( 256 B) | Entropy: 2.5963 bits/byte | MEDIUM_MIXED
+  Bytes 0x000100..0x000200 ( 256 B) | Entropy: 2.4053 bits/byte | MEDIUM_MIXED
+  Bytes 0x000200..0x000300 ( 256 B) | Entropy: 3.8884 bits/byte | MEDIUM_MIXED
+  Bytes 0x000300..0x000400 ( 256 B) | Entropy: 3.5527 bits/byte | MEDIUM_MIXED
+  Bytes 0x000400..0x000500 ( 256 B) | Entropy: 4.2594 bits/byte | MEDIUM_MIXED
+  Bytes 0x000500..0x000600 ( 256 B) | Entropy: 4.2063 bits/byte | MEDIUM_MIXED
+  Bytes 0x000600..0x000700 ( 256 B) | Entropy: 4.4788 bits/byte | MEDIUM_MIXED
+  Bytes 0x000700..0x0007f4 ( 244 B) | Entropy: 7.9307 bits/byte | HIGH_COMPRESSED_OR_OPAQUE

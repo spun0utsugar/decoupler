@@ -1,0 +1,64 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "source_filename": "raw_telemetry_dump.bin",
+    "sha256": "36657a0fe84db3edc5abf82bb6d82d543f3ba723573b224a9d62f87180617c13",
+    "format_family": "GENERIC_STRUCTURED_BINARY",
+    "crs": {
+      "crs_type": "LOCAL_CARTESIAN",
+      "epsg_hint": null,
+      "affine_matrix": null,
+      "units": "units",
+      "provenance": null
+    },
+    "decompressed_streams": []
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "feat_f64_0_0x24",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            1000.0,
+            2000.0
+          ],
+          [
+            1050.5,
+            2045.25
+          ],
+          [
+            1110.0,
+            2080.75
+          ],
+          [
+            1180.25,
+            2100.0
+          ],
+          [
+            1240.0,
+            2150.5
+          ],
+          [
+            1300.0,
+            2200.0
+          ]
+        ]
+      },
+      "properties": {
+        "feature_id": "feat_f64_0_0x24",
+        "layer_id": "layer_heuristic_f64",
+        "layer_name": "heuristic_coordinate_runs",
+        "geometry_kind": "LineString",
+        "byte_offset": 36,
+        "byte_length": 100,
+        "stream_lineage": "root",
+        "detector": "SlidingWindowFloat64Detector",
+        "confidence": 0.921,
+        "vertex_count": 6,
+        "encoding": "LENGTH_PREFIXED_F64_LE"
+      }
+    }
+  ]
+}
